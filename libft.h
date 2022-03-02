@@ -13,8 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 typedef struct s_list
 {
@@ -22,7 +23,11 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int	main();
+int width_counter(char *line, char ch);
+char	*ft_strnew(size_t size);
+char	*ft_astrjoin(char *s1, char *s2);
+int	ft_newline(const char *str);
+char	*get_next_line(int fd);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
@@ -67,4 +72,5 @@ int		ft_isascii(int ch);
 int		ft_isprint(int ch);
 int		ft_strlen(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t len);
+
 #endif

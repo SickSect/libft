@@ -17,9 +17,8 @@ SRC = ft_strlen.c \
 	ft_calloc.c \
 	ft_substr.c \
 	ft_strtrim.c \
-	ft_strrchr.c \
+	ft_strchr.c \
 	ft_strnstr.c \
-	ft_strjoin.c \
 	ft_strdup.c \
 	ft_split.c \
 	ft_memcmp.c \
@@ -33,7 +32,10 @@ SRC = ft_strlen.c \
 	ft_putstr_fd.c \
 	ft_strmapi.c \
 	ft_putnbr_fd.c \
-	ft_striteri.c
+	ft_striteri.c \
+	get_next_line.c \
+	get_next_line_utils.c \
+	width_counter.c
 
 BONUS = ft_lstnew.c \
 	ft_lstadd_front.c \
